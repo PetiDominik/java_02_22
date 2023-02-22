@@ -9,7 +9,7 @@ public class MetodusokGyak {
         int elso10Osszeg = elso10SzamOsszege();
         kiir(String.format("Az első 10 szám összege: %d", elso10Osszeg));
         int aBOsszeg = osszead(a, b);
-        kiir(String.format("%d + %d = %d", a, b, a+b));
+        kiir(String.format("%d + %d = %d", a, b, aBOsszeg));
         
     }
     
