@@ -4,6 +4,10 @@ package metodusokgyak;
 public class MetodusokGyak {
 
     public static void main(String[] args) {
+        program();
+    }
+    
+    private static void program() {
         int a, b, c, d;
         a = 1;
         b = 4;
