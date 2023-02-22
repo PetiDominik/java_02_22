@@ -8,25 +8,42 @@ public class MetodusokGyak {
     }
     
     private static void program() {
-        int a, b, c, d;
-        a = 1;
-        b = 4;
-        int elso10Osszeg = elso10SzamOsszege();
-        kiir(String.format("Az első 10 szám összege: %d", elso10Osszeg));
-        int aBOsszeg = osszead(a, b);
-        kiir(String.format("%d + %d = %d", a, b, aBOsszeg));
-        
+        elsoFeladat10szamKiir();
+        masodikFeladat2SzamOsszeg();
         //írjuk ki 4 szám összegét
-        c = 4;
-        d = 6;
+        harmadikFeladat4SzamOsszeg();
+        negyedikFeladat3SzamOsszegGyoke();
+    }
+
+    private static void negyedikFeladat3SzamOsszegGyoke() {
+        int a = 1;
+        int b = 4;
+        int c = 4;
+        int osszeg = osszead(a, b);
+        osszeg = osszead(osszeg, c);
+        kiir("sqrt(%d + %d + %d) = %.2f".formatted(a, b, c, Math.sqrt(osszeg)));
+    }
+
+    private static void harmadikFeladat4SzamOsszeg() {
+        int a = 1;
+        int b = 4;
+        int c = 4;
+        int d = 6;
         int osszeg = osszead(a, b);
         osszeg += osszead(c, d);
         kiir(String.format("%d + %d + %d + %d = %d", a, b, c, d, osszeg));
-        
-        //írjuk ki 3 szám összegének a gyökét
-        osszeg = osszead(a, b);
-        osszeg = osszead(osszeg, c);
-        kiir("sqrt(%d + %d + %d) = %.2f".formatted(a, b, c, Math.sqrt(osszeg)));
+    }
+
+    private static void masodikFeladat2SzamOsszeg() {
+        int a = 1;
+        int b = 4;
+        int aBOsszeg = osszead(a, b);
+        kiir(String.format("%d + %d = %d", a, b, aBOsszeg));
+    }
+
+    private static void elsoFeladat10szamKiir() {
+        int elso10Osszeg = elso10SzamOsszege();
+        kiir(String.format("Az első 10 szám összege: %d", elso10Osszeg));
     }
     
     private static int elso10SzamOsszege() {
