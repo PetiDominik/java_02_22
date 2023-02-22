@@ -4,21 +4,18 @@ package metodusokgyak;
 public class MetodusokGyak {
 
     public static void main(String[] args) {
-        
-        
+        int a = 1;
+        int b = 4;
+        int elso10Osszeg = elso10SzamOsszege();
+        kiir(String.format("Az első 10 szám összege: %d", elso10Osszeg));
+        int aBOsszeg = osszead(a, b);
+        kiir(String.format("%d + %d = %d", a, b, a+b));
         
     }
     
     private static int elso10SzamOsszege() {
-        int n = 10;
-        int osszeg = nSzamOsszege(n);
-        return osszeg;
-        //kiir("Az első %d szám összege: %d\n".formatted(n, osszeg));
-    }
-    
-    private static int nSzamOsszege(int max) {
         int osszeg = 0;
-        for (int i = 0; i < max; i++) {
+        for (int i = 0; i < 10; i++) {
             osszeg += i;
             
         }
@@ -26,14 +23,11 @@ public class MetodusokGyak {
     }
     
     private static int osszead(int a, int b) {
-        int osszeg = a+b;
-        return osszeg;
-        //kiir("%d + %d = %d\n".formatted(a, b, osszeg));
+        return a+b;
     }
     
-    private static void kiir(int a, int b) {
-        System.out.printf("Az első %d szám összege: %d\n", 10, elso10SzamOsszege());
-        System.out.printf("%d + %d = %d\n", a, b,osszead(a, b));
+    private static void kiir(String szoveg) {
+        System.out.println(szoveg);
     }
 
     
