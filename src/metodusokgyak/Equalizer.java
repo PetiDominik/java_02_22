@@ -24,10 +24,10 @@ public class Equalizer {
     }
 
     private static void eq(int hossz) {
-        System.out.println(blokkGeneralas(hossz));
+        eq(hossz, false);
     }
     private static void eq() {
-        eq(rnd.nextInt(3, 8));
+        eq(false);
     }
     
     
